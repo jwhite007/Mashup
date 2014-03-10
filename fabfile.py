@@ -149,7 +149,8 @@ def sync_it():
 
 
 def _install_dep():
-    sudo('apt-get -y install nginx')
+    # sudo('apt-get -y install nginx')
+    sudo('apt-get -y install python-pip')
     sudo('pip install requests')
 
 
@@ -171,7 +172,7 @@ def deploy():
     write_nginxconf()
     install_dep()
     sync_it()
-    # start_server()
+    start_server()
     # get_info()
 
 
